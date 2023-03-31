@@ -22,3 +22,13 @@ jobs:
           uses: zaproxy/action-baseline@v0.7.0
           with:
             target: 'https://www.zaproxy.org'
+  snyk:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@master
+      - name: Run Snyk to check for vulnerabilities
+        uses: snyk/actions/node@master # For node projects, change accordingly
+        env:
+          SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}    
+        with:
+          command: monitor
