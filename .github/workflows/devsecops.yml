@@ -30,5 +30,4 @@ jobs:
         uses: snyk/actions/node@master # For node projects, change accordingly 
         env:
           SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}  
-        with:
-          command: monitor
+        
