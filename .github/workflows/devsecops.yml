@@ -1,4 +1,4 @@
-name: DevSecOps Pipeline2
+name: DevSecOps Pipeline1
 on: push
 
 jobs: 
